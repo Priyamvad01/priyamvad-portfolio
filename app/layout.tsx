@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { AmbientBackground } from "@/components/layout/ambient-background";
+import { IntelligenceLayer } from "@/components/intelligence/intelligence-layer";
 import { ScrollManager } from "@/components/layout/scroll-manager";
 import { ScrollProgress } from "@/components/layout/scroll-progress";
 import { SiteFooter } from "@/components/layout/site-footer";
@@ -85,26 +86,40 @@ export const metadata: Metadata = {
 
 const structuredData = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  name: siteProfile.name,
-  url: siteUrl,
-  email: siteProfile.email,
-  telephone: siteProfile.phone,
-  jobTitle: siteProfile.role,
-  sameAs: [siteProfile.github, siteProfile.linkedin],
-  alumniOf: {
-    "@type": "CollegeOrUniversity",
-    name: siteProfile.education,
-  },
-  knowsAbout: [
-    "Backend Development",
-    "REST APIs",
-    "FastAPI",
-    "Flask",
-    "AWS",
-    "Docker",
-    "CI/CD",
-    "AI-integrated systems",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": `${siteUrl}/#person`,
+      name: siteProfile.name,
+      url: siteUrl,
+      email: siteProfile.email,
+      telephone: siteProfile.phone,
+      jobTitle: siteProfile.role,
+      sameAs: [siteProfile.github, siteProfile.linkedin],
+      alumniOf: {
+        "@type": "CollegeOrUniversity",
+        name: siteProfile.education,
+      },
+      knowsAbout: [
+        "Backend Development",
+        "REST APIs",
+        "FastAPI",
+        "Flask",
+        "AWS",
+        "Docker",
+        "CI/CD",
+        "AI-integrated systems",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      name: `${siteProfile.name} Portfolio`,
+      url: siteUrl,
+      author: { "@id": `${siteUrl}/#person` },
+      description:
+        "Premium engineering portfolio for backend systems, AI-integrated workflows, cloud deployment, and modern software projects.",
+    },
   ],
 };
 
@@ -137,6 +152,7 @@ export default function RootLayout({
           </main>
           <SiteFooter />
         </div>
+        <IntelligenceLayer />
       </body>
     </html>
   );

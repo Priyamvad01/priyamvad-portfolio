@@ -201,6 +201,7 @@ public/og/
 - [Deployment](./docs/DEPLOYMENT.md)
 - [Performance](./docs/PERFORMANCE.md)
 - [SEO](./docs/SEO.md)
+- [Future-Ready Enhancements](./docs/FUTURE_READY.md)
 - [Contributing](./CONTRIBUTING.md)
 - [Changelog](./CHANGELOG.md)
 

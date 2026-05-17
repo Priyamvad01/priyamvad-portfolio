@@ -42,6 +42,17 @@ export function TerminalWindow() {
   const scrollRef = useRef<HTMLDivElement>(null)
 
   const commandMap = useMemo(() => terminalCommands, [])
+  const suggestions = useMemo(() => {
+    const normalized = input.trim().toLowerCase()
+
+    if (!normalized) {
+      return ["help", "assistant", "cmdk", "healthcare-system", "contact"]
+    }
+
+    return terminalCommandNames
+      .filter((command) => command.startsWith(normalized))
+      .slice(0, 5)
+  }, [input])
 
   useEffect(() => {
     scrollRef.current?.scrollTo({
@@ -117,6 +128,7 @@ export function TerminalWindow() {
       </div>
       <TerminalPrompt
         value={input}
+        suggestions={suggestions}
         onChange={setInput}
         onSubmit={submitCommand}
         onHistoryPrevious={showPreviousCommand}

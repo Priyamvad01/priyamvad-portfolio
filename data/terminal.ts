@@ -27,6 +27,9 @@ export const terminalCommandNames = [
   "projects",
   "healthcare-system",
   "deploy-status",
+  "status",
+  "assistant",
+  "cmdk",
   "docker",
   "ci-cd",
   "aws",
@@ -57,7 +60,11 @@ export const terminalCommands: Record<string, TerminalResponse> = {
       },
       {
         label: "Cloud / DevOps",
-        items: ["deploy-status", "docker", "ci-cd", "aws"],
+        items: ["deploy-status", "status", "docker", "ci-cd", "aws"],
+      },
+      {
+        label: "Smart UI",
+        items: ["assistant", "cmdk"],
       },
       {
         label: "Links",
@@ -192,13 +199,47 @@ export const terminalCommands: Record<string, TerminalResponse> = {
   "deploy-status": {
     title: "Deployment status",
     summary:
-      "No live production deployment is claimed yet. The architecture is prepared around Docker, Jenkins, CI/CD, and AWS deployment direction.",
+      "The portfolio is live on Vercel with static routes, generated SEO assets, project case study routing, and deployment-safe API fallbacks.",
     sections: [
       {
-        label: "Prepared path",
-        items: ["GitHub source", "Jenkins pipeline direction", "Docker containers", "AWS EC2 / S3 / IAM / RDS awareness"],
+        label: "Production path",
+        items: [
+          "GitHub source repository",
+          "Vercel production deployment",
+          "Generated sitemap, robots, Open Graph, and app icons",
+          "Contact API returns a safe fallback when provider delivery is not configured",
+        ],
       },
     ],
+    links: [{ label: "Open live portfolio", href: "https://priyamvad-portfolio.vercel.app" }],
+  },
+  status: {
+    title: "Live system status",
+    summary:
+      "Production portfolio is deployed and validated across mobile, tablet, desktop, and ultrawide layouts.",
+    tags: ["Vercel", "GitHub", "Responsive", "SEO"],
+  },
+  assistant: {
+    title: "Portfolio guide",
+    summary:
+      "The portfolio includes a minimal assistant layer for navigation, project summaries, skill direction, contact shortcuts, and future AI integration.",
+    sections: [
+      {
+        label: "Architecture",
+        items: [
+          "Curated local knowledge today",
+          "API boundary at /api/assistant",
+          "Prepared for future OpenAI or Vercel AI SDK integration",
+        ],
+      },
+    ],
+    tags: ["Guide", "AI-ready", "Navigation", "Projects"],
+  },
+  cmdk: {
+    title: "Command palette",
+    summary:
+      "Use Ctrl + K or Cmd + K to open quick navigation across pages, project routes, social links, terminal, and contact paths.",
+    tags: ["Quick nav", "Keyboard", "Developer UX"],
   },
   docker: {
     title: "Docker workflow",
