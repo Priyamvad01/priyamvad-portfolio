@@ -219,7 +219,8 @@ export function SmartAssistant({ onOpenCommandPalette }: SmartAssistantProps) {
                     Cmd K
                   </button>
                   <button
-                    type="submit"
+                    type="button"
+                    onClick={() => askAssistant(query)}
                     className="inline-flex size-8 items-center justify-center rounded-full bg-cyan-100/12 text-cyan-50 transition hover:bg-cyan-100/18"
                     aria-label="Submit assistant question"
                     disabled={loading}
