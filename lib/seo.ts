@@ -24,7 +24,9 @@ export function createMetadata({
       : fullTitle
 
   return {
-    title: browserTitle,
+    title: {
+      absolute: browserTitle,
+    },
     description,
     keywords: [
       siteProfile.name,
