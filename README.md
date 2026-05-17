@@ -205,6 +205,7 @@ public/og/
 - [SEO](./docs/SEO.md)
 - [Future-Ready Enhancements](./docs/FUTURE_READY.md)
 - [Maintenance Workflow](./docs/MAINTENANCE.md)
+- [Evolution Strategy](./docs/EVOLUTION.md)
 - [Contributing](./CONTRIBUTING.md)
 - [Changelog](./CHANGELOG.md)
 

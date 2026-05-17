@@ -18,6 +18,7 @@ This portfolio is designed to evolve as Priyamvad Ranjan adds projects, certific
 | Certifications | `data/certifications.ts` | Verified proof links, PDFs, preview images |
 | Blog planning | `data/blog.ts` | Future `/blog` route with MDX or CMS content |
 | Expansion roadmap | `data/content-roadmap.ts` | Analytics, AI assistant, certificate gallery, content workflow |
+| Evolution roadmap | `data/evolution.ts` | Career growth, project ecosystem, release cadence, health checks |
 | Assistant knowledge | `data/assistant.ts` | Future retrieval or AI provider integration |
 | Skills | `data/skills.ts` | New tools, learning areas, and workflow updates |
 
@@ -102,6 +103,14 @@ local update
 ```
 
 Use small commits for content updates and feature-oriented commits for new systems.
+
+## Release Levels
+
+Use `data/evolution.ts` and `docs/EVOLUTION.md` to choose the right validation depth:
+
+- Patch update: copy, metadata, or minor proof corrections.
+- Content release: new project, certificate, resume, or case-study update.
+- Platform upgrade: blog route, analytics, real AI assistant, or major interactive system.
 
 ## Rollback Awareness
 

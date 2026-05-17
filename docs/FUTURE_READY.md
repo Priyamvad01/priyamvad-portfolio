@@ -96,3 +96,5 @@ The long-term content roadmap is now represented in `data/content-roadmap.ts`, w
 ## Long-Term Maintenance
 
 Use `docs/MAINTENANCE.md` as the operating guide for future updates. It covers project additions, certification proof, blog preparation, assistant evolution, validation, deployment flow, and rollback awareness.
+
+Use `docs/EVOLUTION.md` for the broader post-release strategy: career growth, future project integration, certification proof, blog activation, AI evolution, analytics, deployment upgrades, and ecosystem health checks.
