@@ -20,7 +20,10 @@ Install Command: npm install
 Build Command: npm run build
 Output Directory: managed by Next.js
 Node Version: latest stable supported by Vercel
+Production Branch: main
 ```
+
+The repository includes `vercel.json` so Vercel can detect the project consistently from GitHub or the CLI.
 
 ## Environment Variables
 
