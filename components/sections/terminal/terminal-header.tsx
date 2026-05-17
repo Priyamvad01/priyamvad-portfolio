@@ -10,7 +10,7 @@ export function TerminalHeader() {
       </div>
       <div className="flex items-center gap-2 font-mono text-xs text-slate-500">
         <SquareTerminal className="size-3.5" />
-        terminal.priyamvad.dev
+        portfolio-console
       </div>
     </div>
   )

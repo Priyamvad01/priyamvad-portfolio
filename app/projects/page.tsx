@@ -104,7 +104,7 @@ export default function ProjectsPage() {
           <SectionHeading
             eyebrow="Project Grid System"
             title="A scalable project catalogue designed for future engineering work."
-            description="The grid supports featured systems, secondary projects, and future project placeholders without redesigning the page."
+            description="The grid supports featured systems, secondary projects, and future additions without redesigning the page."
           />
           <div className="mt-8 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
             <ProjectHoverPreview>
@@ -178,9 +178,9 @@ export default function ProjectsPage() {
         <SectionGlow position="center" />
         <Container className="relative z-10">
           <SectionHeading
-            eyebrow="Future Projects"
-            title="Placeholders for the next systems without breaking the premium rhythm."
-            description="These cards preserve the architecture for upcoming AI systems, backend platforms, and cloud-native apps."
+            eyebrow="Future Direction"
+            title="Reserved space for the next systems in the same visual language."
+            description="The page is ready for upcoming AI systems, backend platforms, and cloud-native apps while keeping the current work honest and focused."
           />
           <GridLayout columns="three" className="mt-8">
             {futureProjects.map((project) => (

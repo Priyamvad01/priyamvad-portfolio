@@ -400,8 +400,9 @@ export default async function ProjectCaseStudyPage({
               </h3>
               <p className="text-body-premium mt-4">
                 GitHub is used as the professional project history destination.
-                If live deployment is not available yet, the page still documents
-                the intended deployment architecture clearly.
+                The page documents the deployment direction clearly so the
+                architecture remains understandable even before a public project
+                runtime is attached.
               </p>
               <div className="mt-7">
                 <GlowButton asChild>
@@ -412,7 +413,7 @@ export default async function ProjectCaseStudyPage({
               </div>
             </div>
             <div className="rounded-3xl border border-white/10 bg-black/18 p-5">
-              <p className="text-label-premium mb-4">Deployment placeholder</p>
+              <p className="text-label-premium mb-4">Deployment Roadmap</p>
               <div className="grid gap-3 sm:grid-cols-2">
                 {["Docker images", "Jenkins pipeline", "AWS runtime", "Environment config"].map((item) => (
                   <div

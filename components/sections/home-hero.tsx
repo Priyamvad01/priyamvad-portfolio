@@ -35,16 +35,16 @@ export function HomeHero() {
             variants={cinematicReveal}
             className="text-fluid-display mt-7 max-w-5xl"
           >
-            Engineering intelligent systems with backend depth and cloud-ready
-            delivery.
+            Building backend-first systems with practical AI and cloud delivery
+            awareness.
           </motion.h1>
           <motion.p
             variants={fadeUp}
             className="text-subtitle mt-7 max-w-2xl"
           >
             I&apos;m {siteProfile.name}, a Computer Science student focused on
-            Python backend systems, AI-integrated applications, REST APIs, Docker
-            workflows, and scalable deployment foundations.
+            Python backend development, REST APIs, AI-integrated workflows,
+            Docker, and cloud-ready deployment practices.
           </motion.p>
           <motion.div
             variants={fadeUp}
@@ -60,10 +60,13 @@ export function HomeHero() {
                 Contact Me <Mail className="size-4" />
               </Link>
             </GlowButton>
-            <SecondaryButton asChild>
-              <Link href="#" aria-label="Resume download placeholder">
-                Download Resume <ArrowDownToLine className="size-4" />
-              </Link>
+            <SecondaryButton
+              type="button"
+              disabled
+              aria-disabled="true"
+              className="cursor-not-allowed"
+            >
+              Resume Coming Soon <ArrowDownToLine className="size-4" />
             </SecondaryButton>
           </motion.div>
           <motion.div variants={fadeUp} className="mt-7">

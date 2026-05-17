@@ -226,7 +226,7 @@ export default function AboutPage() {
       <AboutSection
         eyebrow="Mini Highlights"
         title="Small but honest signals of direction and readiness."
-        description="No inflated numbers, just a concise snapshot of the current portfolio foundation."
+        description="No inflated numbers, just a concise snapshot of current project depth, tooling exposure, and growth direction."
       >
         <GridLayout columns="four">
           {highlights.map((item) => (

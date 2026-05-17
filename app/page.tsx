@@ -55,9 +55,9 @@ export default function Home() {
       <HomeHero />
       <SectionContainer>
         <SectionHeading
-          eyebrow="About Preview"
-          title="A young engineer building toward intelligent production systems."
-          description="This section is structured for the upcoming narrative: education, technical direction, problem-solving style, and engineering philosophy."
+          eyebrow="Engineering Direction"
+          title="Backend-first learning with a clear path into AI and cloud systems."
+          description="Priyamvad's portfolio is organized for fast professional scanning: education, technical direction, project depth, and production-aware engineering habits."
         />
       </SectionContainer>
 
@@ -65,8 +65,8 @@ export default function Home() {
         <div className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
           <SectionHeading
             eyebrow="Featured Project"
-            title="Project storytelling starts with system design."
-            description="The first project route is prepared as a proper case study, not a shallow gallery item."
+            title="Project storytelling is anchored in architecture and implementation."
+            description="The healthcare platform is presented as the strongest proof of work, with backend structure, AI workflow, database thinking, and deployment direction visible from the start."
           />
           <ProjectCard project={featuredProject} featured />
         </div>
@@ -75,7 +75,7 @@ export default function Home() {
       <SectionContainer>
         <SectionHeading
           eyebrow="Skills Preview"
-          title="Core signals for backend, AI, and cloud development."
+          title="Technical signals that define the current engineering direction."
         />
         <GridLayout columns="three" className="mt-8">
           {homePreviewSections.map((item) => (
@@ -89,20 +89,21 @@ export default function Home() {
           <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-center">
             <div>
               <p className="text-label-premium mb-3">
-                Next Step
+                Recruiter Path
               </p>
               <h2 className="text-section-title">
-                Explore the engineering backbone.
+                Review the strongest proof of work first.
               </h2>
               <p className="text-body-premium mt-3 max-w-2xl">
-                Visit the projects and terminal foundations before the visual
-                polish and deep content phases are layered in.
+                Start with the healthcare case study, then use the terminal or
+                contact page to explore the portfolio quickly and connect with
+                clear context.
               </p>
               <Divider className="mt-6 max-w-lg" />
             </div>
             <GlowButton asChild>
-              <Link href="/terminal">
-                Open Terminal <Workflow className="size-4" />
+              <Link href="/projects/healthcare-ai-system">
+                Open Case Study <Workflow className="size-4" />
               </Link>
             </GlowButton>
           </div>

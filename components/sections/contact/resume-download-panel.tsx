@@ -16,8 +16,9 @@ export function ResumeDownloadPanel() {
             Resume download architecture prepared.
           </h2>
           <p className="text-body-premium mt-3">
-            Add a PDF later at `public/resume/priyamvad-ranjan-resume.pdf` and
-            wire this button to the file path.
+            A dedicated PDF slot is reserved for the latest resume so the
+            contact flow can support a verified download as soon as the file is
+            added.
           </p>
         </div>
         <SecondaryButton type="button" aria-disabled="true" className="cursor-not-allowed opacity-75">

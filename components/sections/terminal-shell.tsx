@@ -1,7 +1,7 @@
 const terminalLines = [
   { prompt: "$", command: "profile --identity", output: "Priyamvad Ranjan | Backend, AI & Cloud Developer" },
   { prompt: "$", command: "stack --core", output: "Python, FastAPI, Flask, AWS, Docker, CI/CD, REST APIs" },
-  { prompt: "$", command: "project open healthcare-ai-system", output: "Loading system design placeholders and AI workflow map..." },
+  { prompt: "$", command: "project open healthcare-ai-system", output: "Opening architecture notes and AI workflow map..." },
 ]
 
 export function TerminalShell() {
@@ -13,7 +13,7 @@ export function TerminalShell() {
           <span className="size-2.5 rounded-full bg-slate-500/80" />
           <span className="size-2.5 rounded-full bg-cyan-200/70" />
         </div>
-        <p className="font-mono text-xs text-slate-500">terminal.priyamvad.dev</p>
+        <p className="font-mono text-xs text-slate-500">portfolio-console</p>
       </div>
       <div className="space-y-5 p-5 font-mono text-sm">
         {terminalLines.map((line) => (
