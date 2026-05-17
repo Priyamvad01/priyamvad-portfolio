@@ -32,9 +32,10 @@ async function run() {
 
     for (const path of pages) {
       await page.goto(`${baseUrl}${path}`, {
-        waitUntil: "networkidle",
+        waitUntil: "domcontentloaded",
         timeout: 45000,
       })
+      await page.waitForTimeout(600)
 
       const result = await page.evaluate(() => ({
         scrollWidth: document.documentElement.scrollWidth,

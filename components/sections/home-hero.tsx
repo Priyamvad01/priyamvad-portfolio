@@ -72,9 +72,9 @@ export function HomeHero() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, x: 30, filter: "blur(12px)" }}
+          initial={{ opacity: 0, x: 22, filter: "blur(10px)" }}
           animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
-          transition={{ duration: 0.9, delay: 0.22, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.74, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
           className="relative mx-auto w-full max-w-xl lg:ml-auto"
         >
           <div className="absolute -inset-8 rounded-[3rem] bg-cyan-200/6 blur-3xl" />

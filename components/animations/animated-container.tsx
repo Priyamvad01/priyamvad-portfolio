@@ -31,7 +31,7 @@ export function AnimatedContainer({
               visible: {
                 ...cinematicReveal.visible,
                 transition: {
-                  duration: 0.65,
+                  duration: 0.58,
                   ease: [0.22, 1, 0.36, 1],
                   delay,
                 },

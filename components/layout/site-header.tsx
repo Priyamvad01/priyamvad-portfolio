@@ -62,13 +62,13 @@ export function SiteHeader() {
         <Container className="flex h-full items-center justify-between gap-3 px-3 sm:px-5 lg:px-6">
           <Link
             href="/"
-            className="group flex min-w-0 items-center gap-3"
+            className="group flex min-w-0 items-center gap-3 rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-cyan-200/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             onClick={() => setIsMenuOpen(false)}
           >
-            <span className="flex size-9 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/[0.06] text-sm font-semibold text-cyan-100 shadow-[0_0_34px_rgba(103,232,249,0.08)]">
+            <span className="flex size-9 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/[0.06] text-sm font-semibold text-cyan-100 shadow-[0_0_34px_rgba(103,232,249,0.08)] transition duration-300 group-hover:border-cyan-100/20 group-hover:bg-cyan-100/10 group-hover:shadow-[0_0_42px_rgba(103,232,249,0.14)]">
               PR
             </span>
-            <span className="hidden truncate text-sm font-medium text-white sm:block">
+            <span className="hidden truncate text-sm font-medium text-white transition-colors duration-300 group-hover:text-cyan-50 sm:block">
               {siteProfile.name}
             </span>
           </Link>
@@ -82,10 +82,10 @@ export function SiteHeader() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "relative rounded-full px-3 py-2 text-sm transition duration-300",
+                  "relative rounded-full px-3 py-2 text-sm outline-none transition duration-300 focus-visible:ring-2 focus-visible:ring-cyan-200/45 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
                   active
                     ? "text-white"
-                    : "text-slate-300 hover:bg-white/[0.06] hover:text-white"
+                    : "text-slate-300 hover:bg-white/[0.06] hover:text-white hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]"
                 )}
               >
                 {active ? (
@@ -107,7 +107,7 @@ export function SiteHeader() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Open Priyamvad Ranjan GitHub"
-            className="micro-transition touch-target hidden size-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-slate-300 hover:border-white/15 hover:bg-white/[0.08] hover:text-white sm:flex"
+            className="micro-transition touch-target hidden size-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-slate-300 outline-none hover:-translate-y-0.5 hover:border-white/15 hover:bg-white/[0.08] hover:text-white hover:shadow-[0_0_32px_rgba(103,232,249,0.1)] focus-visible:ring-2 focus-visible:ring-cyan-200/45 focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:flex"
           >
             <GitHubIcon className="size-4" />
           </Link>
@@ -116,7 +116,7 @@ export function SiteHeader() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Open Priyamvad Ranjan LinkedIn"
-            className="micro-transition touch-target hidden size-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-slate-300 hover:border-white/15 hover:bg-white/[0.08] hover:text-white sm:flex"
+            className="micro-transition touch-target hidden size-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-slate-300 outline-none hover:-translate-y-0.5 hover:border-white/15 hover:bg-white/[0.08] hover:text-white hover:shadow-[0_0_32px_rgba(103,232,249,0.1)] focus-visible:ring-2 focus-visible:ring-cyan-200/45 focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:flex"
           >
             <LinkedInIcon className="size-4" />
           </Link>
@@ -125,7 +125,7 @@ export function SiteHeader() {
             aria-label="Toggle navigation menu"
             aria-expanded={isMenuOpen}
             onClick={() => setIsMenuOpen((value) => !value)}
-            className="micro-transition touch-target flex size-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-white hover:bg-white/[0.08] lg:hidden"
+            className="micro-transition touch-target flex size-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-white outline-none hover:bg-white/[0.08] focus-visible:ring-2 focus-visible:ring-cyan-200/45 focus-visible:ring-offset-2 focus-visible:ring-offset-background lg:hidden"
           >
             {isMenuOpen ? <X className="size-4" /> : <Menu className="size-4" />}
           </button>

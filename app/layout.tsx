@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 
 import { AmbientBackground } from "@/components/layout/ambient-background";
 import { ScrollManager } from "@/components/layout/scroll-manager";
@@ -9,18 +8,6 @@ import { SiteHeader } from "@/components/layout/site-header";
 import { siteProfile, siteUrl } from "@/constants/site";
 
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -129,7 +116,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} dark h-full scroll-smooth antialiased`}
+      className="dark h-full scroll-smooth antialiased"
     >
       <body className="min-h-full overflow-x-hidden bg-background text-foreground">
         <script

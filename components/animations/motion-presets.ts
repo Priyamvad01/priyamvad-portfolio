@@ -1,13 +1,13 @@
 import type { Variants } from "framer-motion"
 
 export const motionTimings = {
-  soft: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
-  quick: { duration: 0.35, ease: [0.22, 1, 0.36, 1] },
-  cinematic: { duration: 0.85, ease: [0.16, 1, 0.3, 1] },
+  soft: { duration: 0.62, ease: [0.22, 1, 0.36, 1] },
+  quick: { duration: 0.26, ease: [0.22, 1, 0.36, 1] },
+  cinematic: { duration: 0.78, ease: [0.16, 1, 0.3, 1] },
 } as const
 
 export const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 24, filter: "blur(8px)" },
+  hidden: { opacity: 0, y: 18, filter: "blur(7px)" },
   visible: {
     opacity: 1,
     y: 0,
@@ -17,7 +17,7 @@ export const fadeUp: Variants = {
 }
 
 export const cinematicReveal: Variants = {
-  hidden: { opacity: 0, y: 28, scale: 0.985, filter: "blur(10px)" },
+  hidden: { opacity: 0, y: 22, scale: 0.99, filter: "blur(9px)" },
   visible: {
     opacity: 1,
     y: 0,
@@ -63,8 +63,8 @@ export const staggerContainer: Variants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.08,
-      delayChildren: 0.08,
+      staggerChildren: 0.065,
+      delayChildren: 0.06,
     },
   },
 }

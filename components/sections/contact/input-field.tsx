@@ -21,8 +21,8 @@ export function InputField({
   ...props
 }: InputFieldProps) {
   return (
-    <label className="grid gap-2" htmlFor={id}>
-      <span className="text-xs font-medium uppercase tracking-[0.18em] text-slate-400">
+    <label className="group grid gap-2" htmlFor={id}>
+      <span className="text-xs font-medium uppercase tracking-[0.18em] text-slate-400 transition-colors duration-300 group-focus-within:text-cyan-100/80">
         {label}
       </span>
       <PremiumInput
@@ -49,8 +49,8 @@ export function TextareaField({
   ...props
 }: TextareaFieldProps) {
   return (
-    <label className="grid gap-2" htmlFor={id}>
-      <span className="text-xs font-medium uppercase tracking-[0.18em] text-slate-400">
+    <label className="group grid gap-2" htmlFor={id}>
+      <span className="text-xs font-medium uppercase tracking-[0.18em] text-slate-400 transition-colors duration-300 group-focus-within:text-cyan-100/80">
         {label}
       </span>
       <PremiumTextarea
