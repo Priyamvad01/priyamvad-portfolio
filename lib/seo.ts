@@ -18,9 +18,13 @@ export function createMetadata({
   const url = `${siteUrl}${path}`
   const fullTitle =
     title === siteProfile.name ? title : `${title} | ${siteProfile.name}`
+  const browserTitle =
+    path === "/"
+      ? `${siteProfile.name} | Backend, AI & Cloud Developer`
+      : fullTitle
 
   return {
-    title,
+    title: browserTitle,
     description,
     keywords: [
       siteProfile.name,
