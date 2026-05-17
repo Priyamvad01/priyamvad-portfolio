@@ -61,6 +61,26 @@ Heavier interactive sections are lazy-loaded to reduce initial route cost.
 
 Portfolio content is stored in `data/` so pages can map structured content into reusable UI components. This keeps content updates cleaner and reduces hardcoded page logic.
 
+Current structured sources:
+
+- `data/projects.ts`: project records, future projects, architecture highlights, and workflow stages.
+- `data/certifications.ts`: credential records, proof metadata, status, and future PDF paths.
+- `data/blog.ts`: planned technical writing topics for a future blog route.
+- `data/content-roadmap.ts`: long-term content, analytics, AI, and maintenance roadmap.
+- `data/assistant.ts`: local assistant knowledge, command palette actions, and future AI boundary content.
+
+Shared helpers in `lib/content.ts` support sorting and status filtering as future collections grow.
+
+## Future Route Strategy
+
+Routes should be activated only when content quality justifies them. For example, `/blog` is intentionally prepared as data and documentation first, then can become a real route once multiple polished technical articles exist.
+
+Future dynamic routes should follow the project case-study pattern:
+
+```txt
+data source -> generateStaticParams -> metadata factory -> reusable page sections
+```
+
 ## Design System
 
 The visual system is built from:
@@ -73,3 +93,15 @@ The visual system is built from:
 - Motion presets for cinematic but subtle reveals
 
 The design direction should remain premium, minimal, technical, and mature.
+
+## Asset Growth
+
+Static asset folders are reserved for future proof and preview material:
+
+- `public/certifications`
+- `public/resume`
+- `public/previews`
+- `public/screenshots`
+- `public/og`
+
+These folders keep recruiter-facing proof, social previews, and deployment media organized without changing page architecture.

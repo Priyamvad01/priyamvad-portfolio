@@ -23,3 +23,25 @@ export type ProjectCaseStudy = {
   outcome?: string
   architecture?: string[]
 }
+
+export type CertificationRecord = {
+  id: string
+  title: string
+  description: string
+  icon: LucideIcon
+  meta: string
+  status: "planned" | "future" | "verified"
+  issuer?: string
+  issuedAt?: string
+  proofUrl?: string
+  assetPath?: string
+}
+
+export type BlogArticleDraft = {
+  slug: string
+  title: string
+  description: string
+  category: "backend" | "ai" | "cloud" | "devops" | "career"
+  status: "planned" | "draft" | "published"
+  keywords: string[]
+}

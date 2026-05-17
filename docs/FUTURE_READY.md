@@ -90,3 +90,9 @@ The repository can expand toward:
 - Admin-only content workflows
 
 Keep future content structured in `data/`, `content/`, or a CMS integration rather than hardcoding large text blocks inside page components.
+
+The long-term content roadmap is now represented in `data/content-roadmap.ts`, with planned blog topics in `data/blog.ts` and certification proof records in `data/certifications.ts`.
+
+## Long-Term Maintenance
+
+Use `docs/MAINTENANCE.md` as the operating guide for future updates. It covers project additions, certification proof, blog preparation, assistant evolution, validation, deployment flow, and rollback awareness.

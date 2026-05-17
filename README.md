@@ -194,6 +194,8 @@ public/og/
 - Add project screenshots and preview media
 - Add additional case studies as projects grow
 - Add analytics and monitoring after deployment
+- Activate a future blog route once technical writing content is ready
+- Connect a real AI assistant provider only through server-side environment variables
 
 ## Documentation
 
@@ -202,6 +204,7 @@ public/og/
 - [Performance](./docs/PERFORMANCE.md)
 - [SEO](./docs/SEO.md)
 - [Future-Ready Enhancements](./docs/FUTURE_READY.md)
+- [Maintenance Workflow](./docs/MAINTENANCE.md)
 - [Contributing](./CONTRIBUTING.md)
 - [Changelog](./CHANGELOG.md)
 
