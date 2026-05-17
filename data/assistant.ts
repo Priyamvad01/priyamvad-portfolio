@@ -183,21 +183,39 @@ export function findAssistantResponse(message: string) {
 
   const matchedPrompt = assistantPrompts
     .map((prompt) => {
-    const haystack = [
-      prompt.label,
-      prompt.query,
-      prompt.response,
-      ...(prompt.tags ?? []),
-    ]
-      .join(" ")
-      .toLowerCase()
+      const label = prompt.label.toLowerCase()
+      const query = prompt.query.toLowerCase()
+      const tags = (prompt.tags ?? []).join(" ").toLowerCase()
+      const response = prompt.response.toLowerCase()
+      const haystack = [label, query, tags, response].join(" ")
 
       return {
         prompt,
-        score: words.reduce(
-          (total, word) => total + (haystack.includes(word) ? 1 : 0),
-          0
-        ),
+        score: words.reduce((total, word) => {
+          let score = total
+
+          if (label.includes(word)) {
+            score += 4
+          }
+
+          if (query.includes(word)) {
+            score += 3
+          }
+
+          if (tags.includes(word)) {
+            score += 2
+          }
+
+          if (response.includes(word)) {
+            score += 1
+          }
+
+          if (haystack.includes(word)) {
+            score += 0.5
+          }
+
+          return score
+        }, 0),
       }
     })
     .sort((a, b) => b.score - a.score)[0]
