@@ -1,5 +1,7 @@
 import { chromium } from "playwright"
 
+const baseUrl = process.env.BASE_URL ?? "http://localhost:3000"
+
 const pages = [
   "/",
   "/about",
@@ -29,7 +31,7 @@ async function run() {
     })
 
     for (const path of pages) {
-      await page.goto(`http://localhost:3000${path}`, {
+      await page.goto(`${baseUrl}${path}`, {
         waitUntil: "networkidle",
         timeout: 45000,
       })

@@ -63,6 +63,12 @@ npm start
 npm run responsive:check
 ```
 
+Remote deployment audit:
+
+```bash
+BASE_URL=https://your-domain.vercel.app npm run responsive:check
+```
+
 ## Lighthouse Direction
 
 Expected optimization priorities:

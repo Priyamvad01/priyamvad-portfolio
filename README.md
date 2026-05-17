@@ -141,6 +141,12 @@ npm start
 npm run responsive:check
 ```
 
+To validate a deployed URL:
+
+```bash
+BASE_URL=https://your-domain.vercel.app npm run responsive:check
+```
+
 ## Environment
 
 Create `.env.local` from `.env.example` when deployment-specific values are required.
