@@ -30,9 +30,11 @@ The repository includes `vercel.json` so Vercel can detect the project consisten
 Create these variables in Vercel Project Settings:
 
 ```txt
-NEXT_PUBLIC_SITE_URL=https://your-production-domain
+NEXT_PUBLIC_SITE_URL=
 CONTACT_FORM_ENDPOINT=
 ```
+
+`NEXT_PUBLIC_SITE_URL` can stay empty for the first Vercel deployment because the app falls back to Vercel's deployment URL. Set it later when a custom domain is connected.
 
 `CONTACT_FORM_ENDPOINT` can point to a Formspree endpoint, custom webhook, or backend service. When it is empty, the API route returns a safe fallback response and does not fake delivery.
 
